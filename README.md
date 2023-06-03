@@ -47,5 +47,5 @@ JDK 17, if you do not have it installed yet, and you do have [sdkman](https://sd
 
 ## Extra
 
-If you want to deploy this to AWS the request handler is: `org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest`
+If you want to deploy this to AWS the request handler is: `org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest`  
 To speed up subsequent invocations of this function on AWS you can go to `settings => basic settings => edit` and set `SnapStart` to `PublishedVersions` and then create a new version and publish it.
