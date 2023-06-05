@@ -4,7 +4,11 @@
 
 ## About 
 
-AWS recently announced support for Java 17, which means we can now write functions using spring boot 3 (which uses java 17 as the baseline) and spring cloud functions.   
+This project is a sample implementation of a spring cloud function that will return you a randomly generated number.
+You might not want certain applications to be continuously running for a simple call, so an event-driven serverless function (aka it gets started by a certain trigger) can save you quite a bit in the long rung.
+The advantage of spring cloud function is that we can easily implement business logic through functions, without having to care about the underlying platform (AWS Lambda, Apache OpenWhisk, Google cloud functions, microsoft azure, ... ) beyond having to switch adapters.
+
+AWS recently announced support for Java 17, which means we can now write functions using spring boot 3 (which uses java 17 as the baseline) and spring cloud functions so it seemed like a nice opportunity to set something up. 
 See for reference: https://aws.amazon.com/blogs/compute/java-17-runtime-now-available-on-aws-lambda/
 
 The function itself makes use of functional definitions, rather than traditional bean definitions to speed up the startup.
@@ -42,6 +46,18 @@ You do not need to have maven installed locally, you can just run `./mvnw test`.
 ## Requirements
 
 JDK 17, if you do not have it installed yet, and you do have [sdkman](https://sdkman.io/) you can run `sdk env install`
+
+***
+
+## Pitfalls
+
+Just like any other solution cloud functions do have their drawbacks or no added value: 
+* they can add extra complexity
+* you need a proper monitoring setup
+* they can be challenging at times to debug/troubleshoot
+* if they are just for orchestration `aws step functions`/`gcp workflows`/... might be a better solution
+
+So give some consideration to your usecase, and do not be afraid to reevaluate it every now and then.
 
 ***
 
