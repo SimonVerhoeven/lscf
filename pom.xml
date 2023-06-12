@@ -83,7 +83,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<dependencies>
-					<!-- Reduces compiled jar file, so the -->
+					<!-- Reduces compiled jar file, so the file can be uploaded from the UI, rather than having to use an S3 bucket -->
 					<dependency>
 						<groupId>org.springframework.boot.experimental</groupId>
 						<artifactId>spring-boot-thin-layout</artifactId>
