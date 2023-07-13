@@ -14,7 +14,7 @@ See for reference: https://aws.amazon.com/blogs/compute/java-17-runtime-now-avai
 The function itself makes use of functional definitions, rather than traditional bean definitions to speed up the startup.
 
 The main differences are:
-- the main class is an `ApplicationContextInitializer` annotated with `@SpringBootConfiguration` rather than `@SpringBootConfiguration`
+- the main class is an `ApplicationContextInitializer` annotated with `@SpringBootConfiguration` rather than `@SpringBootApplication`
 - generateRandomNumber isn't annotated with `@Bean`, but registered in the initialize method
 - `FunctionalSpringApplication` is used rather than its parent class `SpringApplication` 
 
