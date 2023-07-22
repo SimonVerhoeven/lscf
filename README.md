@@ -29,7 +29,7 @@ This is just one of the ways to test/run your `Function` locally.
 Other means to test this:
 * [AWS Lambda Runtime Emulator (RIE)](https://docs.aws.amazon.com/lambda/latest/dg/images-test.html) which acts as a proxy for the Lambda Runtime API and is part of the AWS Lambda base image.
 * `spring-boot-starter-web(flux)` so you can call it locally
-* `FunctionalSpringBootTest` with a call to your function\
+* `FunctionalSpringBootTest` with a call to your function
 * ...
 
 But it's a nice way to see one of the possibilities of the LocalStack testcontainer.
@@ -45,7 +45,7 @@ You do not need to have maven installed locally, you can just run `./mvnw test`.
 
 ## Requirements
 
-JDK 17, if you do not have it installed yet, and you do have [sdkman](https://sdkman.io/) you can run `sdk env install`
+JDK 17, if you do not have it installed yet, and if you have [sdkman](https://sdkman.io/) you can run `sdk env install`
 
 ***
 
